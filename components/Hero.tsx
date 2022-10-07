@@ -8,7 +8,7 @@ import BackGroundCircles from './BackGroundCircles';
 
 const Hero = () => {
   const [text, count] = useTypewriter({
-    words: ['Fullstack-Developer.tsx', 'Designer', 'Freelancer'],
+    words: ['Hi, <My name> is Salim', 'Fullstack-Developer.tsx', 'Designer'],
     loop: true,
     delaySpeed: 2000,
   });

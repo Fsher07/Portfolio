@@ -1,6 +1,7 @@
 import React from 'react';
 import { SocialIcon } from 'react-social-icons';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 type Props = {};
 
@@ -25,43 +26,49 @@ const Header = ({}: Props) => {
       >
         {/* Logos */}
         <SocialIcon
-          url='https://youtube.com/jaketrent'
-          fgColor='red'
+          url='https://www.linkedin.com/in/fsalimhidir/'
+          className='hover:animate-pulse'
+          fgColor='#F7AB0A'
           bgColor='transparent'
         />
+
         <SocialIcon
-          url='https://youtube.com/jaketrent'
-          fgColor='red'
+          url='https://github.com/Fsher07'
+          fgColor='#F7AB0A'
           bgColor='transparent'
+          className='hover:animate-pulse'
         />
         <SocialIcon
-          url='https://youtube.com/jaketrent'
-          fgColor='red'
+          url='https://bitbucket.org/furkansalim/'
+          fgColor='#F7AB0A'
           bgColor='transparent'
+          className='hover:animate-pulse'
         />
       </motion.div>
 
-      <motion.div
-        initial={{
-          x: 500,
-          opacity: 0,
-          scale: 0.5,
-        }}
-        animate={{
-          x: 0,
-          opacity: 1,
-          scale: 1,
-        }}
-        transition={{
-          duration: 1.5,
-        }}
-        className='flex items-center text-gray-300 cursor-pointer'
-      >
-        <SocialIcon network='email' fgColor='gray' bgColor='transparent' />
-        <p className='hidden md:inline-flex text-sm text-gray-400'>
-          Contact Me
-        </p>
-      </motion.div>
+      <Link href='#contact'>
+        <motion.div
+          initial={{
+            x: 500,
+            opacity: 0,
+            scale: 0.5,
+          }}
+          animate={{
+            x: 0,
+            opacity: 1,
+            scale: 1,
+          }}
+          transition={{
+            duration: 1.5,
+          }}
+          className='flex items-center text-gray-300 cursor-pointer'
+        >
+          <SocialIcon network='email' fgColor='#F7AB0A' bgColor='transparent' />
+          <p className='hidden md:inline-flex text-sm text-gray-400 pr-5'>
+            Contact Me
+          </p>
+        </motion.div>
+      </Link>
     </header>
   );
 };

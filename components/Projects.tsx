@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import React from 'react';
-import Project from './Project';
 import { motion } from 'framer-motion';
 
 type Props = {};
@@ -45,7 +44,7 @@ function Projects({}: Props) {
     >
       <h3 className='sectionTitle'>Projects</h3>
 
-      <div className='relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20'>
+      <div className='relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80'>
         {projects.map((project, i) => (
           <div
             key={project.id}
@@ -54,7 +53,7 @@ function Projects({}: Props) {
             <motion.div
               initial={{
                 y: -300,
-                opaticy: 0,
+                opacity: 0,
               }}
               transition={{ duration: 1.2 }}
               whileInView={{ opacity: 1, y: 0 }}
