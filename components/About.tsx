@@ -33,13 +33,12 @@ const About = () => {
           Here is a little background
         </h4>
         <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis
-          maiores quasi tenetur ex natus nobis ullam, corrupti iusto sed, ipsum
-          officia molestias error porro voluptatem minima laborum magni quisquam
-          deleniti. Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-          Eum, repudiandae fugit eius illum neque, sit commodi consequuntur
-          animi fuga corporis quibusdam libero reiciendis a ex quae esse sint
-          asperiores iure?
+          Before diving into the programming world, was a civil engineer who
+          developed himself in the area of green building, a good team player
+          would often be the person on the team who can take charge and be
+          trusted during the most stressful times. As have completed a
+          full-stack developer course that collaborated with many developers
+          from around the world, eager to contribute to the tech area.
         </p>
       </div>
     </motion.div>
