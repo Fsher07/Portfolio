@@ -28,19 +28,19 @@ const Header = ({}: Props) => {
         <SocialIcon
           url='https://www.linkedin.com/in/fsalimhidir/'
           className='hover:animate-pulse'
-          fgColor='#F7AB0A'
+          fgColor='gray'
           bgColor='transparent'
         />
 
         <SocialIcon
           url='https://github.com/Fsher07'
-          fgColor='#F7AB0A'
+          fgColor='gray'
           bgColor='transparent'
           className='hover:animate-pulse'
         />
         <SocialIcon
           url='https://bitbucket.org/furkansalim/'
-          fgColor='#F7AB0A'
+          fgColor='gray'
           bgColor='transparent'
           className='hover:animate-pulse'
         />
@@ -63,7 +63,7 @@ const Header = ({}: Props) => {
           }}
           className='flex items-center text-gray-300 cursor-pointer'
         >
-          <SocialIcon network='email' fgColor='#F7AB0A' bgColor='transparent' />
+          <SocialIcon network='email' fgColor='gray' bgColor='transparent' />
           <p className='hidden md:inline-flex text-sm text-gray-400 pr-5'>
             Contact Me
           </p>
