@@ -61,11 +61,11 @@ const Header = ({}: Props) => {
           transition={{
             duration: 1.5,
           }}
-          className='flex items-center text-gray-300 cursor-pointer'
+          className='flex items-center text-gray-300 cursor-pointer hover:animate-pulse'
         >
           <SocialIcon network='email' fgColor='gray' bgColor='transparent' />
           <p className='hidden md:inline-flex text-sm text-gray-400 pr-5'>
-            Contact Me
+            GET IN TOUCH
           </p>
         </motion.div>
       </Link>

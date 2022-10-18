@@ -1,36 +1,36 @@
 import Image from 'next/image';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
+import axios from 'axios';
+import Link from 'next/link';
 
 type Props = {};
 
+interface Project {
+  _id: string;
+  title: string;
+  description: string;
+  img: string;
+  link: string;
+}
+
 function Projects({}: Props) {
-  const projects = [
-    {
-      id: 1,
-      title: 'Project 1',
-      description: 'Project 1 description',
-      image: '/images/1.png',
-      tags: ['Next.js', 'Tailwind CSS', 'Framer Motion'],
-      length: 3,
-    },
-    {
-      id: 2,
-      title: 'Project 2',
-      description: 'Project 2 description',
-      image: '/images/2.png',
-      tags: ['Next.js', 'Tailwind CSS', 'Framer Motion'],
-      length: 3,
-    },
-    {
-      id: 3,
-      title: 'Project 3',
-      description: 'Project 3 description',
-      image: '/images/3.png',
-      tags: ['Next.js', 'Tailwind CSS', 'Framer Motion'],
-      length: 3,
-    },
-  ];
+  const [projects, setProjects] = useState<any>(null);
+  const [hover, setHover] = useState(false);
+
+  const mouseEnter = () => {
+    setHover(true);
+  };
+
+  const mouseLeave = () => {
+    setHover(false);
+  };
+
+  useEffect(() => {
+    axios.get('http://localhost:5000/api/projects').then((res) => {
+      setProjects(res.data);
+    });
+  }, []);
   return (
     <motion.div
       initial={{
@@ -45,44 +45,49 @@ function Projects({}: Props) {
       <h3 className='sectionTitle'>Projects</h3>
 
       <div className='relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80'>
-        {projects.map((project, i) => (
-          <div
-            key={project.id}
-            className='w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen'
-          >
-            <motion.div
-              initial={{
-                y: -300,
-                opacity: 0,
-              }}
-              transition={{ duration: 1.2 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+        {projects &&
+          projects.map((project: Project, i: number) => (
+            <div
+              key={project._id}
+              className='w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen'
             >
-              <Image
-                width={128}
-                height={128}
-                src='https://images.g2crowd.com/uploads/product/image/large_detail/large_detail_251be2af3ae607c45c14e816eaa1cf41/postgresql.png'
-                alt='project image'
-              />
-            </motion.div>
-            <div className='space-y-10 px-0 md:px-10 max-w-6xl'>
-              <h4 className='text-4xl font-semibold text-center'>
-                <span className='underline decoration-[#F7AB0A]/50'>
-                  Case Study {i + 1} of {project.length}:
-                </span>{' '}
-                Deliveroo Clone
-              </h4>
+              <Link href={project.link}>
+                <motion.div
+                  initial={{
+                    y: -300,
+                    opacity: 0,
+                  }}
+                  transition={{ duration: 1.2 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  className='group relative w-full h-full transition duration-150 ease-in-out cursor-pointer'
+                >
+                  <Image
+                    layout={'fill'}
+                    objectFit={'scale-down'}
+                    src={project.img}
+                    alt='project image'
+                    className='hover:opacity-50 transition-opacity duration-1000 ease-in-out'
+                  />
+                  <div className='text-3xl text-[#F7AB0A] text-bold top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 absolute opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out'>
+                    Click to look closer
+                  </div>
+                </motion.div>
+              </Link>
 
-              <p className='text-lg text-center md:text-left'>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Laudantium neque dignissimos, corporis esse, natus porro fuga
-                consequuntur qui ipsa quas cum sequi numquam blanditiis quod,
-                consectetur a mollitia commodi facere?
-              </p>
+              <div className='space-y-10 px-0 md:px-10 max-w-6xl'>
+                <h4 className='text-4xl font-semibold text-center'>
+                  <span className='underline decoration-[#F7AB0A]/50'>
+                    Case Study {i + 1} of {projects.length}:
+                  </span>{' '}
+                  {project.title}
+                </h4>
+                <p className='text-lg text-center md:text-left'>
+                  {project.description}
+                </p>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
       </div>
 
       <div className='w-full absolute top-[30%] bg-[#F7AB0A]/10 left-0 h-[500px] -skew-y-12'></div>

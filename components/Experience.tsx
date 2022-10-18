@@ -1,8 +1,27 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
+import axios from 'axios';
 import ExperienceCard from './ExperienceCard';
 
-const Experience = () => {
+type Props = {};
+
+interface Experience {
+  _id: string;
+  title: string;
+  logo: string;
+  position: string;
+  period: string;
+  summaries: string[];
+  skills: any;
+}
+
+const Experience = ({}: Props) => {
+  const [experience, setExperience] = useState<any>(null);
+  useEffect(() => {
+    axios.get('http://localhost:5000/api/experiences').then((res) => {
+      setExperience(res.data);
+    });
+  }, []);
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -13,10 +32,19 @@ const Experience = () => {
       <h3 className='sectionTitle'>Experience</h3>
 
       <div className='flex w-full space-x-8 overflow-x-scroll p-10 snap-x snap-mandatory overflow-y-hidden scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80'>
-        <ExperienceCard />
-        <ExperienceCard />
-        <ExperienceCard />
-        <ExperienceCard />
+        {experience
+          ? experience.map((exp: Experience) => (
+              <ExperienceCard
+                key={exp._id}
+                title={exp.title}
+                logo={exp.logo}
+                position={exp.position}
+                period={exp.period}
+                summaries={exp.summaries}
+                skills={exp.skills}
+              />
+            ))
+          : null}
       </div>
     </motion.div>
   );
