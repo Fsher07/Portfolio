@@ -14,9 +14,11 @@ interface SkillProps {
 const Skills = () => {
   const [skills, setSkills] = useState<any>(null);
   useEffect(() => {
-    axios.get('http://localhost:5000/api/skills').then((res) => {
-      setSkills(res.data);
-    });
+    axios
+      .get('https://portfoliomongodb.herokuapp.com/api/skills')
+      .then((res) => {
+        setSkills(res.data);
+      });
   }, []);
   return (
     <motion.div className='flex relative flex-col text-center md:text-left xl:flex-row max-w-[2000px] xl:px-10 min-h-screen justify-center xl:space-y-0 mx-auto items-center'>

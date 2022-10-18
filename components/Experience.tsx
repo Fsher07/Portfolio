@@ -18,9 +18,11 @@ interface Experience {
 const Experience = ({}: Props) => {
   const [experience, setExperience] = useState<any>(null);
   useEffect(() => {
-    axios.get('http://localhost:5000/api/experiences').then((res) => {
-      setExperience(res.data);
-    });
+    axios
+      .get('https://portfoliomongodb.herokuapp.com/api/experiences')
+      .then((res) => {
+        setExperience(res.data);
+      });
   }, []);
   return (
     <motion.div

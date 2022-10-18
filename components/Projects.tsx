@@ -16,20 +16,13 @@ interface Project {
 
 function Projects({}: Props) {
   const [projects, setProjects] = useState<any>(null);
-  const [hover, setHover] = useState(false);
-
-  const mouseEnter = () => {
-    setHover(true);
-  };
-
-  const mouseLeave = () => {
-    setHover(false);
-  };
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/projects').then((res) => {
-      setProjects(res.data);
-    });
+    axios
+      .get('https://portfoliomongodb.herokuapp.com/api/projects')
+      .then((res) => {
+        setProjects(res.data);
+      });
   }, []);
   return (
     <motion.div
