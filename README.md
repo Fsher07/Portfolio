@@ -1,5 +1,5 @@
 # Portfolio
-I've created a portfolio that is designed well via tailwind css to introduce myself.
+ I've created a portfolio that is designed well via tailwind css to introduce myself.
 
 ## Built With
 
@@ -15,9 +15,7 @@ I've created a portfolio that is designed well via tailwind css to introduce mys
 
 ## Back-end Link
 
-> [API Link](https://github.com/Fsher07/rails-back-end-api)
-
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+> [API Link](https://github.com/Fsher07/Portfolio-backend)
 
 ## Getting Started
 
