@@ -8,7 +8,7 @@ I've created a portfolio that is designed well via tailwind css to introduce mys
 - TypeScript
 - Tailwind CSS
 - Framer Motion
-(Back End)
+-(Back End)
 - Node.js
 - Express.js
 - MongoDB
