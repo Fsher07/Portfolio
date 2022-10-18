@@ -1,8 +1,35 @@
+# Portfolio
+I've created a portfolio that is designed well via tailwind css to introduce myself.
+
+## Built With
+
+- React
+- Next.js
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+(Back End)
+- Node.js
+- Express.js
+- MongoDB
+
+## Back-end Link
+
+> [API Link](https://github.com/Fsher07/rails-back-end-api)
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
 
-First, run the development server:
+First,
+
+```
+  npm install
+```
+
+to install dependencies.
+
+Secondly, run the development server:
 
 ```bash
 npm run dev
@@ -18,17 +45,20 @@ You can start editing the page by modifying `pages/index.tsx`. The page auto-upd
 
 The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+## Deployed on Vercel
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Author
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+👤 **Furkan Salim Hıdır**
 
-## Deploy on Vercel
+- GitHub: [Salim](https://github.com/Fsher07)
+- LinkedIn: [Salim](https://www.linkedin.com/in/furkan-salim-h%C4%B1d%C4%B1r-3441ab1b2/)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🤝 Contributing
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Contributions, issues, and feature requests are welcome!
+
+## Show your support
+
+Give a ⭐️ if you like this project!
