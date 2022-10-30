@@ -62,7 +62,7 @@ function Projects({}: Props) {
                     alt='project image'
                     className='hover:opacity-50 transition-opacity duration-1000 ease-in-out'
                   />
-                  <div className='text-3xl text-[#F7AB0A] text-bold top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 absolute opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out'>
+                  <div className='text-3xl text-[#F7AB0A] text-bold top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 absolute opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out'>
                     Click to look closer
                   </div>
                 </motion.div>
