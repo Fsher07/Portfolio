@@ -16,7 +16,7 @@ interface SkillProps {
 const Skills = () => {
   const [skills, setSkills] = useState<any>(null);
   useEffect(() => {
-    axios.get(`${baseUrl}/skils`).then((res) => {
+    axios.get(`${baseUrl}/skills`).then((res) => {
       setSkills(res.data);
     });
   }, []);
