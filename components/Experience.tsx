@@ -36,17 +36,20 @@ const Experience = ({}: Props) => {
 
       <div className="flex w-full space-x-8 overflow-x-scroll p-10 snap-x snap-mandatory overflow-y-hidden scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
         {experience
-          ? experience.map((exp: Experience) => (
-              <ExperienceCard
-                key={exp._id}
-                title={exp.title}
-                logo={exp.logo}
-                position={exp.position}
-                period={exp.period}
-                summaries={exp.summaries}
-                skills={exp.skills}
-              />
-            ))
+          ? experience
+              .slice()
+              .reverse()
+              .map((exp: Experience) => (
+                <ExperienceCard
+                  key={exp._id}
+                  title={exp.title}
+                  logo={exp.logo}
+                  position={exp.position}
+                  period={exp.period}
+                  summaries={exp.summaries}
+                  skills={exp.skills}
+                />
+              ))
           : null}
       </div>
     </motion.div>
