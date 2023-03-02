@@ -16,6 +16,7 @@ const nextConfig = {
       "upload.wikimedia.org",
       "drive.google.com",
       "media.licdn.com",
+      "unsplash.com",
     ],
   },
 };
