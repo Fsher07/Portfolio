@@ -17,6 +17,7 @@ const nextConfig = {
       "drive.google.com",
       "media.licdn.com",
       "unsplash.com",
+      "flickr.com",
     ],
   },
 };
