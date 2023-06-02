@@ -56,7 +56,7 @@ function Projects({}: Props) {
                   viewport={{ once: true }}
                   className="group relative w-full h-full transition duration-150 ease-in-out cursor-pointer"
                 >
-                  <img
+                  <Image
                     src={project.img}
                     alt="project image"
                     className="hover:opacity-50 transition-opacity duration-1000 ease-in-out"
