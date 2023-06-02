@@ -19,6 +19,7 @@ const nextConfig = {
       "unsplash.com",
       "flickr.com",
       "storage.googleapis.com",
+      "salim-portfolio.vercel.app",
     ],
   },
 };
