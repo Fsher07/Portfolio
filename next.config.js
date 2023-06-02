@@ -18,6 +18,7 @@ const nextConfig = {
       "media.licdn.com",
       "unsplash.com",
       "flickr.com",
+      "storage.googleapis.com",
     ],
   },
 };
