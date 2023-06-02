@@ -20,6 +20,13 @@ const nextConfig = {
       "flickr.com",
       "storage.googleapis.com",
       "salim-portfolio.vercel.app",
+      "storage.cloud.google.com",
+    ],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "storage.googleapis.com",
+      },
     ],
   },
 };
