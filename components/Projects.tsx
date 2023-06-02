@@ -24,6 +24,7 @@ function Projects({}: Props) {
       setProjects(res.data);
     });
   }, []);
+
   return (
     <motion.div
       initial={{
@@ -56,8 +57,6 @@ function Projects({}: Props) {
                   className="group relative w-full h-full transition duration-150 ease-in-out cursor-pointer"
                 >
                   <Image
-                    layout={"fill"}
-                    objectFit={"scale-down"}
                     src={project.img}
                     alt="project image"
                     className="hover:opacity-50 transition-opacity duration-1000 ease-in-out"
