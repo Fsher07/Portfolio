@@ -21,6 +21,7 @@ const nextConfig = {
       "storage.googleapis.com",
       "salim-portfolio.vercel.app",
       "storage.cloud.google.com",
+      "imgur.com",
     ],
     remotePatterns: [
       {
